@@ -42,9 +42,11 @@ def play(my_songs)
   #get the file path of the song by looking it up in the my_songs hash
   puts "Please enter a song name or number:"
   input = gets.chomp
-  my_songs.each do |song, filename|
-    
-  end 
+  if my_songs.has_key?(input)
+    my_songs.each do |song, filename|
+      
+    end
+  end
   
   puts "Invalid input, please try again"
 end
