@@ -37,7 +37,7 @@ def play(songs)
   #  end
   #end
   songs.each_with_index do |song, index|
-    if input == song || input == (index + 1)
+    if input == song || input.to_i == (index + 1)
       puts "Playing #{song}"
       return
     end
