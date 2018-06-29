@@ -21,21 +21,31 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   input = gets.chomp
-  if input.is_a?(Integer)
-    songs.each_with_index do |song, index|
-      if input == index
-        puts "Playing #{song}"
-        return
-      end
+  #if input.is_a?(Integer)
+  #  songs.each_with_index do |song, index|
+  #    if input == index
+  #      puts "Playing #{song}"
+  #      return
+  #    end
+  #  end
+  #elsif input.is_a?(String)
+  #  songs.each do |song|
+  #    if song == input
+  #      puts "Playing #{song}"
+  #      return
+  #    end
+  #  end
+  #end
+  songs.each_with_index do |song, index|
+    if input == song
+      puts "Playing #{song}"
+      return
+    elsif input == index
+      puts "Playing #{song}"
+      return 
     end
-  elsif input.is_a?(String)
-    songs.each do |song|
-      if song == input
-        puts "Playing #{song}"
-        return
-      end
-    end
-  end
+  end 
+  
   puts "Invalid input, please try again"
 end 
 
