@@ -23,7 +23,7 @@ def play(songs)
   input = gets.chomp
   if input.is_a?(Integer)
     songs.each_with_index do |song, index|
-      if (input + 1) == index
+      if (input - 1) == index
         puts "Playing #{song}"
         return
       end
