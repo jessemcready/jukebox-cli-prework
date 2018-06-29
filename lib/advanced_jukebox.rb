@@ -44,7 +44,10 @@ def play(my_songs)
   input = gets.chomp
   if my_songs.has_key?(input)
     my_songs.each do |song, filename|
-      
+      if song == input
+        system "open #{filename}"
+        return 
+      end
     end
   end
   
