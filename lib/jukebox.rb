@@ -19,15 +19,10 @@ def help
 end 
 
 def play(songs)
-  #puts "Please enter a song name or number:"
+  puts "Please enter a song name or number:"
   input = gets.chomp
   if input.is_a?(Integer)
-    if input > songs.length || input <= 0
-      puts "Invalid input, please try again"
-    else 
-      puts "Playing #{songs[input]}"
-      return
-    end
+    puts "Playing #{songs[input]}"
   elsif input.is_a?(String)
     songs.each do |song|
       if song == input
