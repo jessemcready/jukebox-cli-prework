@@ -60,5 +60,4 @@ def run(songs)
       break
     end
   end
-  
 end
